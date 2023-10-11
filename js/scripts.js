@@ -8,5 +8,22 @@ pokemonList.forEach(function(pokemon) {
     console.log(pokemon.name + ' is ' + pokemon.height + ' tall ');
     document.write(pokemon.name + ' is ' + pokemon.height + ' tall ' + '<p>');
 });
-// let pokemonRepository = (function () {
+
+let pokemonRepository = (function () {
+    let pokemonList = [];
+  
+    function add(pokemon) {
+      pokemonList.push(pokemon);
+    }
+  
+    function getAll() {
+      return pokemonList;
+    }
+  
+    return {
+      add: add,
+      getAll: getAll
+    };
+  })();
+
 
