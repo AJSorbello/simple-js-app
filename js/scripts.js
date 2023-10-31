@@ -8,6 +8,7 @@ let pokemonRepository = (function () {
       //"detailsURL" in pokemon
       pokemonList.push(pokemon);
     }
+
   }
 
   function getAll() {
@@ -42,19 +43,26 @@ let pokemonRepository = (function () {
     return fetch(apiUrl)
       .then(function (response) {
         return response.json();
-
       })
       .then(function (json) {
+        // Sort the array alphabetically by name
+        json.results.sort(function (a, b) {
+          return a.name.localeCompare(b.name);
+        });
+        // Iterate through the sorted list
         json.results.forEach(function (item) {
           let pokemon = {
             name: item.name,
             detailsUrl: item.url
           };
           add(pokemon);
+
         });
+
       }).catch(function (e) {
         console.error(e);
       })
+
   }
   function loadDetails(item) {
     let url = item.detailsUrl;
