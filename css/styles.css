@@ -5,14 +5,13 @@
   position: relative;
   top: 20px;
   left: 20px;
-}
-h1 {
-    font-size: 30px;
-    font-weight: 700;
+  bottom: 20px;
 }
 
 h1 {
   color:white;
+   font-size: 30px;
+  font-weight: 700;
 }
 
 body {
@@ -23,7 +22,8 @@ body {
     line-height: 1.6;
     min-height: 100vh;
     text-align: center;
-    margin-top: 35px;
+    margin-top: 80px;
+    margin-bottom: 100px;
     
 }
 
@@ -34,6 +34,10 @@ ul {
   display: flex;
   flex-wrap: wrap;
   
+}
+
+#navbar {
+  padding-top: 200px;
 }
 
 .pokemon-list {
