@@ -12,24 +12,24 @@ let pokemonRepository = (function () {
   }
 
   function getAll() {
-    return pokemonList;
+           return pokemonList;
   }
   // data-toggle="modal" data-target="#exampleModal"
 
   function addListItem(pokemon) {
-    let pokemonList = document.querySelector(".list-group");
-    //creating li element inside the ul
+let pokemonList = document.querySelector(".list-group");
+         //creating li element inside the ul
     let listpokemon = document.createElement("li");
-    listpokemon.classList.add('list-group-item');
+ listpokemon.classList.add('list-group-item');
     // creating button element inside the li
     let button = document.createElement("button");
     button.innerText = pokemon.name;
     button.classList.add("button-class", "btn",)
     //bootstrap class
     button.setAttribute("data-toggle", "modal")
-    button.setAttribute("data-target", "#Modal")
+ button.setAttribute("data-target", "#Modal")
     //append button to the li listpokemon as its child
-    listpokemon.appendChild(button);
+             listpokemon.appendChild(button);
     //append the li listpokemon to the ul pokemonList as its child
     pokemonList.appendChild(listpokemon);
     //button
@@ -46,11 +46,11 @@ let pokemonRepository = (function () {
       })
       .then(function (json) {
         // Sort the array alphabetically by name
-        json.results.sort(function (a, b) {
+                 json.results.sort(function (a, b) {
           return a.name.localeCompare(b.name);
         });
         // Iterate through the sorted list
-        json.results.forEach(function (item) {
+               json.results.forEach(function (item) {
           let pokemon = {
             name: item.name,
             detailsUrl: item.url
