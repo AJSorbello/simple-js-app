@@ -1,7 +1,7 @@
 # Pokedex
 
 ## Project description
-Pokedex is an app created from HTML, CSS, and Javascript. It loads a list of different pokemon characters from the api.  You may click on a characters name from the site and a modal window will pop up an image, type, height of the pokemon.
+Pokedex is an app created with HTML, CSS, and Javascript. It loads a list of different pokemon characters from the pokemon api.  This app allows you to click on a pokemon characters name and a small window will pop up to reveal it's image, height, type of pokemon. 
 
 ## How to get the project running
 bootstrap, modal containers, HTML, Javascript, CSS, and ESlinters
